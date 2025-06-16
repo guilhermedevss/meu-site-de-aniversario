@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Para Luana</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Roboto', sans-serif;
+      background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+      color: #333;
+      text-align: center;
+    }
+
+    header {
+      background: #f56f6f;
+      color: white;
+      padding: 60px 20px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      position: relative;
+      z-index: 10;
+    }
+
+    header h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 3rem;
+      font-weight: 700;
+      letter-spacing: 1px;
+      animation: fadeIn 1s ease-in-out;
+    }
+
+    .conteudo {
+      padding: 60px 20px;
+    }
+
+    .imagem-especial {
+      width: 100%;
+      max-width: 450px;
+      border-radius: 15px;
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+      margin-bottom: 30px;
+      transition: transform 0.4s ease;
+    }
+
+    .imagem-especial:hover {
+      transform: scale(1.05);
+    }
+
+    .mensagem {
+      font-size: 1.1rem;
+      line-height: 1.8;
+      margin: 20px auto;
+      max-width: 800px;
+      color: #555;
+    }
+
+    .buttons {
+      margin-top: 40px;
+    }
+
+    .botao {
+      padding: 15px 30px;
+      background: #ff7a7a;
+      border: none;
+      border-radius: 50px;
+      font-size: 1rem;
+      color: white;
+      margin: 15px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .botao:hover {
+      background-color: #e84e4e;
+      transform: scale(1.05);
+    }
+
+    .texto {
+      display: none;
+      font-size: 1.2rem;
+      line-height: 1.8;
+      color: #444;
+      max-width: 700px;
+      margin: 20px auto;
+    }
+
+    footer {
+      background-color: #f56f6f;
+      padding: 20px;
+      color: white;
+      position: relative;
+      z-index: 10;
+    }
+
+    footer p {
+      font-size: 1.2rem;
+    }
+
+    @media (max-width: 768px) {
+      .imagem-especial {
+        max-width: 100%;
+      }
+
+      header h1 {
+        font-size: 2.5rem;
+      }
+
+      .mensagem {
+        font-size: 1rem;
+      }
+    }
+
+    @keyframes fadeIn {
+      0% {
+        opacity: 0;
+        transform: translateY(-20px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+  <script>
+    function mostrarTexto(id) {
+      const textos = document.querySelectorAll('.texto');
+      textos.forEach((texto) => {
+        texto.style.display = 'none';
+      });
+      document.getElementById(id).style.display = 'block';
+    }
+  </script>
+</head>
+<body>
+
+  <header>
+    <h1>Para Luana    </h1>
+  </header>
+
+  <div class="conteudo">
+    <img src="/img/luana.jpeg" alt="Sorriso Encantador" class="imagem-especial">
+    <div class="mensagem">
+      <p>Luana, nossa história começou de maneira simples, sem grandes expectativas, mas o que é incrível é como, ao longo de nossas conversas, fui me conectando cada vez mais com você. A beleza dessa história é que não há pressa. Eu estou aqui para ser seu apoio, para ouvir você e, acima de tudo, para dar espaço para que tudo aconteça no tempo certo.</p>
+      <p>Ainda não nos vimos pessoalmente, mas cada mensagem trocada tem sido especial. Eu valorizo cada momento que passamos conversando, e é isso que me faz sentir que estamos criando algo que vai além das palavras.</p>
+    </div>
+
+    <div class="buttons">
+      <button class="botao" onclick="mostrarTexto('texto1')">Como Tudo Começou</button>
+      <button class="botao" onclick="mostrarTexto('texto2')">Nossas Conversas</button>
+      <button class="botao" onclick="mostrarTexto('texto3')">O Que Eu Sinto Por Você</button>
+    </div>
+
+    <div id="texto1" class="texto">
+      <p>Quando começamos a conversar, eu realmente não sabia o que esperar. Mas algo em você me chamou a atenção e fez com que eu quisesse continuar essa troca de ideias. Eu não quero apressar nada, mas o que eu sinto é que estamos começando algo bonito. O mais importante é que estamos compartilhando nossos pensamentos, sem pressa para que as coisas aconteçam de maneira acelerada.</p>
+    </div>
+
+    <div id="texto2" class="texto">
+      <p>Nosso mundo está sendo construído a partir de cada mensagem que trocamos. Por mais que a distância ainda nos separe, sinto que estamos criando um vínculo único e especial. Cada conversa, cada risada e cada silêncio compartilham mais sobre quem somos, e isso é mais do que suficiente para mim, por enquanto.</p>
+    </div>
+
+    <div id="texto3" class="texto">
+      <p>Luana, o que eu sinto por você é simples, mas profundo. Não há pressa em querer que você entenda o que sente. O que mais quero é que você se sinta confortável, que sinta que posso ser seu apoio. E, sem forçar nada, desejo que, com o tempo, possamos entender o que estamos criando juntos. Mas sempre no seu tempo.</p>
+    </div>
+  </div>
+
+  <footer>
+    <p>Luana, você é importante para mim, e eu não quero apressar nada. Estou aqui, sempre, no seu tempo. 💖</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
